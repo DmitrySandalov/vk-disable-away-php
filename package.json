@@ -1,9 +1,9 @@
 {
   "name": "vk-disable-away-php",
-  "title": "vk-disable-away-php",
+  "title": "Vkontakte disable away.php",
   "id": "jid1-1yjRmmPdVN9D8Q",
-  "description": "a basic add-on",
-  "author": "",
+  "description": "Makes links direct without away.php at Vkontakte social network.",
+  "author": "Dmitry Sandalov <dmitry@sandalov.org>",
   "license": "MPL 2.0",
   "version": "0.1"
 }
