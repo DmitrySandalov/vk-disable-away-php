@@ -22,7 +22,7 @@ function modify(){
 
             var new_href = href;
             new_href = new_href.replace(/http:\/\/vk.com\/away.php\?to=/g, '');
-            new_href = new_href.replace(/\&post=-.*/g, '');
+            new_href = new_href.replace(/\&post=.*/g, '');
             new_href = win2unicode(unescape(new_href));
 
             document.links[i].href = new_href;
