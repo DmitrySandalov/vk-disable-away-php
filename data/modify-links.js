@@ -15,8 +15,8 @@ function win2unicode(str) {
 }
 
 // Main function
-function modify(){
-    for (var i=document.links.length; i-->0;) {
+function modify() {
+    for (var i = document.links.length; i-- > 0;) {
         if (document.links[i].href.indexOf('away.php') > -1) {
             var href = document.links[i].href;
 
@@ -31,13 +31,14 @@ function modify(){
 }
 
 // Launches modify at page load
-window.addEventListener('load', modify());
+modify();
 
-// Watches for page changes too
-var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
-var vk_page = document.querySelector('#page_wall_posts');
-var observer = new MutationObserver(function(mutations){
-    mutations.forEach(function(mutation) {
+// Modifies links after content change too
+//var vk_page = document.querySelector('#content');
+var vk_page = document.querySelector('#page_body');
+var observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+//        alert("RUN");
         modify();
     })
 });
@@ -45,5 +46,8 @@ var observer = new MutationObserver(function(mutations){
 observer.observe(vk_page, {
     attributes: true,
     childList: true,
-    characterData: true
-});
+    characterData: true,
+    subtree: true    });
+
+
+
