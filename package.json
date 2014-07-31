@@ -4,6 +4,6 @@
   "id": "jid1-1yjRmmPdVN9D8Q",
   "description": "Makes links direct without away.php at Vkontakte social network.",
   "author": "Dmitry Sandalov <dmitry@sandalov.org>",
-  "license": "MPL 2.0",
+  "license": "GPL 2.0",
   "version": "0.1"
 }
